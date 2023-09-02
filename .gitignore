@@ -35,3 +35,4 @@ terraform.rc
  
 
 /app/plan
+modules/key/devops_key.pub

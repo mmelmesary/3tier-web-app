@@ -18,7 +18,7 @@ resource "aws_launch_template" "my_template" {
   instance_type          = var.EC2_TYPE
   vpc_security_group_ids = [var.CLIENT_SG_ID, var.SSH_SG_ID]
   user_data              = filebase64("../modules/asg/config.sh")
-  key_name               = "mykey"
+  key_name               = var.KEY_NAME
   tags = {
     Name = "${var.PROJECT_NAME}-template"
   }

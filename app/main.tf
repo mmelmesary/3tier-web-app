@@ -16,10 +16,15 @@ module "sg" {
   VPC_CIDR = module.vpc.VPC_CIDR
 }
 
+module "key" {
+  
+  source = "../modules/key"
+}
+
 module "instance" {
   source        = "../modules/ec2"
   EC2_TYPE      = var.EC2_TYPE
-  KEY_NAME      = var.KEY_NAME
+  KEY_NAME      = module.key.DEVOPS_KEY
   PUB_SUB_1A_ID = module.vpc.PUB_SUB_1A_ID
   SSH_SG_ID     = module.sg.SSH_SG_ID
 }
@@ -43,6 +48,7 @@ module "asg" {
   PRI_SUB_2A_ID = module.vpc.PUB_SUB_2A_ID
   PRI_SUB_2B_ID = module.vpc.PUB_SUB_2B_ID
   TG_ARN        = module.alb.TG_ARN
+  KEY_NAME      = module.key.DEVOPS_KEY
 }
 
 module "db" {
@@ -66,6 +72,7 @@ module "secrets" {
 module "cloudfront" {
   source          = "../modules/cloudfront"
   ALB_DOMAIN_NAME = module.alb.ALB_DOMAIN_NAME
+  CERT_ARN        = module.acm.CERT_ARN
 }
 module "route53" {
   source                    = "../modules/route53"

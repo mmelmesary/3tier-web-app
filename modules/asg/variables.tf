@@ -20,3 +20,4 @@ variable "SSH_SG_ID" {}
 variable "PRI_SUB_2A_ID" {}
 variable "PRI_SUB_2B_ID" {}
 variable "TG_ARN" {}
+variable "KEY_NAME" {}

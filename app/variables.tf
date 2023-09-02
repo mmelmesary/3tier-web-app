@@ -1,5 +1,5 @@
 variable "PROJECT_NAME" {}
-variable "region" {}
+variable "REGION" {}
 variable "VPC_CIDR" {}
 variable "PUB_SUB_1A_CIDR" {}
 variable "PUB_SUB_1B_CIDR" {}
