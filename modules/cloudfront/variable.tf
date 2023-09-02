@@ -1,0 +1,1 @@
+variable "ALB_DOMAIN_NAME" {}
