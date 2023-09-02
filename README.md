@@ -1,6 +1,6 @@
 # 3 tier Web Application throgh terraform
 
-![system-arch](./system-architecture.jpg)
+![system-arch](./architecture.jpg)
 ## Prerequisites
 - [x] AWS Account
 - [x] Proper Permissions for your user
