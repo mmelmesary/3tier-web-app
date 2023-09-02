@@ -57,19 +57,19 @@
     HOSTED_ZONE_NAME = ""
    ```
 
-1. Initialize Terraform.
+1. **Initialize Terraform.**
 
     ```bash
     terraform init
     ```
 
-1. See what resources will be created.
+1. **See what resources will be created.**
 
     ```bash
     terraform plan -out plan
     ```
 
-1. Create the resources and deploy the sample.
+1. **Create the resources and deploy the sample.**
 
     ```bash
     terraform apply plan
@@ -77,9 +77,9 @@
 
 ## Clean up
 
-1. Navigate to the `terraform/` directory.
+1. **Navigate to the `/app` directory.**
 
-1. Run the following command:
+1. **Run the following command:**
 
    ```bash
    terraform destroy --auto-approve
